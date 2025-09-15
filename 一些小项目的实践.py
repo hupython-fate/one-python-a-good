@@ -32,3 +32,11 @@ ccchhh='''
        '''.format(x,y)
 #format方法用的是{}花括号。而不是[]方括号，也不是（）圆括号。
 print(ccchhh)
+
+
+
+x='22597987255'
+print(x)
+
+x='666666'
+print(x)
