@@ -5,8 +5,11 @@ class RenLei:
         self.x=XingBie
         self.F=FaSe
 
-    def eat(self):
-        print(f'')
+    def eat(self,nei,where):
+        print(f'{self.n}在{where}里吃{nei}.')
+
+    def sleep(self,where):
+        print(f'{self.n}在{where}睡觉。')
 
 
 
@@ -27,4 +30,6 @@ print(f'这个人的名字是{RenLei_1.n},{RenLei_1.n}的年龄是{RenLei_1.a}�
 RenLei_2=RenLei('liu hua',40,'nang','hei')
 
 #用这个新创建的对象来执行动作。
-RenLei_2.eat
+RenLei_2.eat('do jian','shi tan')#有多少个参数就要填入几个。
+#对象名+点+自定义的方法名+括号（），括号内填入参数。不用特意加print，就可以调用这个对象去做一些事情。
+
