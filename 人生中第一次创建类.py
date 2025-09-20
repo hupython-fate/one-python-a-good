@@ -5,10 +5,8 @@ class RenLei:
         self.x=XingBie
         self.F=FaSe
 
-    def eat(self,he,jiao,yan):
-        self.h=he#必须要把属性名赋值给某个变量。
-        self.j=jiao
-        self.y=yan
+    def eat(self):
+        print(f'')
 
 
 
