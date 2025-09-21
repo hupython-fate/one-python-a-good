@@ -1,9 +1,14 @@
 class RenLei:
-    def __init__(self,name,age,XingBie,FaSe):#这个__init__()构造函数是用来定义对象拥有的属性的模板。但还有构造方法的。
+    def __init__(self,name,age,Xing_Bie,FaSe,xing_ge,sheng_gao,ti_zhong,xie_xin,chu_shen_shi_jian):#这个__init__()构造函数是用来定义对象拥有的属性的模板。但还有构造方法的。
         self.n=name#等号左边的可以是任意字符（变量名），等号右边的是要创建的类（class)的属性名,属性名必须与构造函数括号内的属性名一一对应。
         self.a=age
-        self.x=XingBie
+        self.x=Xing_Bie
         self.F=FaSe
+        self.sb=xing_ge
+        self.sh=sheng_gao
+        self.ti=ti_zhong
+        self.xie=xie_xin
+        self.shen=chu_shen_shi_jian
 
     def eat(self,nei,where):
         print(f'{self.n}在{where}里吃{nei}.')
