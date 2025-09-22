@@ -69,3 +69,34 @@ print(di^gggg)#这就是一个对称差集运算。对称差集，即，不同�
 #第三个要查缺补漏的是循环控制。
 #之前我学了for循环和while循环，但是还没学循环控制（break,continue).
 #今天太晚了，明天在续！
+
+lit=[1,22,9,456,22,3,5,77,20]
+for n in lit:
+    print(f'正在检查{n}')
+    if n>=20:
+        print(f'找到了，大于等于20的数有{n}')
+        #没有加break时会一直循环下去，直到列表内的数全部被打印出来。
+        #如果我们只想要找到第一个大于等于20的数，那么就要加break。
+        break #找到第一个就立即结束循环。
+
+
+
+#示例，找出列表中的奇数。
+shu=[1,2,3,4,5,6,7,8,9,10]
+for j in shu:
+    if j%2==0:
+        continue #如果条件为真，那么就跳过余下的语句，重新开始下一轮循环。
+    print(j)
+
+
+
+
+
+#第四个要查缺补漏的是异常处理。
+#(try.....except)
+
+try:
+    print('holle world.')
+
+except SyntaxError:
+    print('holle!')
