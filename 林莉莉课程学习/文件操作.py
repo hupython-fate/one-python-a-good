@@ -1,4 +1,4 @@
-f=open('./一次尝试.txt','r',encoding='utf-8')
+f=open('../txt文件/一次尝试.txt', 'r', encoding='utf-8')
 x=f.read()#第一次read时就已经读到结尾了。
 print(x)
 y=f.read()#再次读取会返回空字符串。
@@ -13,7 +13,7 @@ f.close()#关闭文件，释放资源。
 如果想要读取文件得一部分，而不是全部的文件，那么可以在read()的括号里加入数字，表示读取多少字节。
 '''
 
-m=open('./第二次尝试.txt','r',encoding='utf-8')
+m=open('../txt文件/第二次尝试.txt', 'r', encoding='utf-8')
 print(m.read(10))#读取1~10字节的文字。
 #为什么是空的呢？因为第一次读已经读到结尾了。所以要换下一个文件。
 print(m.read(20))#读取11~31字节的文字。
@@ -33,7 +33,7 @@ m.close()#关闭文件，释方资源。
 
 #尝试一下readlines的方法，它会读取全部的文件内容，并把每行当作列表（list)元素返回。
 
-k=open('./第三次尝试.txt','r',encoding='utf-8')
+k=open('../txt文件/第三次尝试.txt', 'r', encoding='utf-8')
 jjj=k.readlines()
 print(jjj)
 k.close()#关闭文件，释方资源。
@@ -42,7 +42,7 @@ k.close()#关闭文件，释方资源。
 
 
 #readlines方法与for循环结合。
-d=open('./第四次尝试.txt','r',encoding='utf-8')
+d=open('../txt文件/第四次尝试.txt', 'r', encoding='utf-8')
 ddd=d.readlines()#这一行输出的是列表。
 for dddss in ddd:
     print(dddss)
@@ -55,7 +55,7 @@ d.close()#关闭文件，释方资源。
 '''
 
 
-with open('./第五次尝试.txt','r',encoding='utf-8') as gu:
+with open('../txt文件/第五次尝试.txt', 'r', encoding='utf-8') as gu:
     print(gu.read())#对文件的操作。
     #带缩进的内容会在执行完后自动关闭文件，释放资源。
 
