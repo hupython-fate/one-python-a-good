@@ -151,6 +151,12 @@ else x=='d':
 
 
 
+#也许可以用字典嵌套，
+
+
+
+
+
 
 xuan_ze=input('起输入你的选择：')
 if xuan_ze=='a':

@@ -1,3 +1,19 @@
+def xue_fei(xue_nian_shu,mei_nian_xue_fei,mei_nian_jiao_cai_fei,mei_nian_zu_su_fei,mei_tian_sheng_huo_fei)
+    zhong_xue_fei=xue_nian_shu*mei_nian_xue_fei
+    zhong_jiao_cai_fei=xue_nian_shu*mei_nian_jiao_cai_fei
+    zhong_zu_su_fei=xue_nian_shu*mei_nian_zu_su_fei
+    zhong_sheng_huo_fei=xue_nian_shu*306*mei_tian_sheng_huo_fei
+
+
+
+
+
+
+
+
+
+
+
 x=11000*3
 y=14400*3
 z=800*3
