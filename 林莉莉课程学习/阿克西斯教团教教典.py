@@ -91,3 +91,14 @@ print('''
 
 ''')
 input('请输入任意字符结束程序：')
+#使用类来书写这个代码的尝试：
+
+class NvShen:
+    def __init__(self,fa_se,tong_se,xing_yun_zhi,zhi_li,quan_bin):
+        self.fa=fa_se
+        self.tong=tong_se
+        self.xing=xing_yun_zhi
+        self.zhi=zhi_li
+        self.quan=quan_bin
+
+a_ku_ya=NvShen('洁净的水蓝色头发','深邃的蓝色瞳孔','运气很差，远低于平均值','智障，是一个美丽的傻子。','是水之女神，也是纯洁和美丽的象征，同时掌握一切支援魔法和治愈魔法（宴会魔法）。')
