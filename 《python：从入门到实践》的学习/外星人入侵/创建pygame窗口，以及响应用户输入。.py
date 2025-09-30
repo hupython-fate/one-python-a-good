@@ -7,11 +7,14 @@ class OneOK:
     def __init__(self):
         '''初始化游戏并创建游戏资源'''
         pygame.init()#pygame库中的一个名为init()的方法。  #这是什么意思？用来初始化背景的。
+        self.clo=pygame.time.Clock()#pygame.time模块的一个Clock()方法，
         self.scc=pygame.display.set_mode((1200,800))#一个属性，pygame是库名，display是模块名？set_mode无疑是一个方法名，但是作用是什么？
         '''pygame.display是显示模块，set_mode()是创建游戏窗口的方法，（1200，800）窗口尺寸（宽*高）。
            返回一个Surface对象，代表游戏窗口。
         '''
         pygame.display.set_caption('胡成健的外星人入侵。')
+        #设置背景色
+        self.bei_jin_yan_se=(200,220,230)
 
     def run_game(self):
         '''定义一个名为run_game的方法，
@@ -28,11 +31,15 @@ class OneOK:
                 if e.type == pygame.QUIT:
                     #嗯，这句话我看得懂，意思是，如果e的类型等于pygame.QUIT,可是，pygame.QUIT是什么类型？
                     sys.exit()#这个是用来关闭游戏，退出程序的方法。
+            #每次循环后都会重绘屏幕。
+            self.scc.fill(self.bei_jin_yan_se)#self.scc是一个对象，这个对象是窗口。fill()是一个方法。
+            #self.bei_jin_yan_se是一个对象吗？它是一个属性吧。也能作为方法的参数？嗯，学到了，但是还有疑惑。
             # 让最近绘制的屏幕
             # 已知pygame.display是显示模块，哪么flip()是什么方法?有什么用？
             # flip（）的作用是更新整个屏幕。
             #还有，不能隔多行注释。
             pygame.display.flip()
+            self.clo.tick(60)#"self.cio"是一个实例对象，而“tick()"是一个方法。
 '''好家伙，定义一个方法，把流程控制里的三大要点集全了，while,for,if。'''
 
 if __name__ == '__main__':
