@@ -96,7 +96,27 @@ for j in shu:
 #(try.....except)
 
 try:
-    print('holle world.')
+    print(holle)
+except:#必须写的，如果try中的代码有问题，就会执行except下的问题。
+    print('出现未知错误。')
+else:#可选的，如果try中的代码没有任何问题，则执行else下的语句。
+    print('代码没有任何异常，很好。')
+finally:#可选的，无论try中的代码是否有问题，都会执行finally下的语句。
+    print('我进行了一次错误测试.')
 
-except SyntaxError:
-    print('holle!')
+
+#异常处理能让代码更健壮。
+
+#第五个要查缺布漏的是测试。
+
+#assert后面跟上任何布尔表达式，也就是我们认为应该为Turn的表达式。
+#如果求值结果为Turn那么无事发生，如果求值为false,那么就会发生AssertionError.
+#相当于提醒程序员这里有问题。
+#比如：
+try:
+    assert 1==2
+except AssertionError:
+    print('发生了断言错误。')
+    # assert后面接布尔表达式，即结果为True或者False的表达式。
+    # AssertionError断言错误。
+    # 如果实现断言错误，那么后面的程序都不会运行。

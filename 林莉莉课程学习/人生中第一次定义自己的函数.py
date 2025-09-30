@@ -56,4 +56,6 @@ def BMI_JI_SHUAN_QI(SHEN_gao,ti_zhong):
     else:
         print(f'您的BMI指数为{BMI}，属于偏瘦范围。')
     return BMI
-BMI_JI_SHUAN_QI(1.66,57.7)
+
+
+#结合input语句可以做一个交互式的游戏了。
