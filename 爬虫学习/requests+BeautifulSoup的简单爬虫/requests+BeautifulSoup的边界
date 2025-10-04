@@ -1,0 +1,67 @@
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+
+def traditional_crawler():
+    """传统爬虫能处理的范围"""
+
+    # 1. 静态HTML内容
+    url = "http://books.toscrape.com/"
+    resp = requests.get(url)
+    soup = BeautifulSoup(resp.text, 'html.parser')
+
+    # 提取静态数据
+    books = []
+    for book in soup.select('article.product_pod'):
+        title = book.h3.a['title']
+        price = book.select('.price_color')[0].get_text()
+        books.append({'title': title, 'price': price})
+
+    # 2. 分页爬取
+    print(f"第一页提取了 {len(books)} 本书")
+
+    # 3. 简单表单提交
+    return books
+
+# 运行示例
+# traditional_crawler()
+
+
+
+
+
+
+
+
+def limitations_demo():
+    """requests+bs4的局限性"""
+
+    limitations = [
+        {
+            '问题': 'JavaScript渲染的内容',
+            '现象': '看到HTML但找不到数据',
+            '例子': 'Vue/React/Angular构建的单页面应用'
+        },
+        {
+            '问题': '需要登录的复杂会话',
+            '现象': '返回登录页面或403错误',
+            '例子': '社交媒体、银行网站'
+        },
+        {
+            '问题': '高级反爬机制',
+            '现象': 'IP被封、验证码',
+            '例子': 'Cloudflare防护的网站'
+        },
+        {
+            '问题': 'WebSocket实时数据',
+            '现象': '无法建立长连接',
+            '例子': '聊天应用、实时行情'
+        }
+    ]
+
+    for i, limit in enumerate(limitations, 1):
+        print(f"{i}. {limit['问题']}")
+        print(f"   现象: {limit['现象']}")
+        print(f"   例子: {limit['例子']}\n")
+
+# limitations_demo()
