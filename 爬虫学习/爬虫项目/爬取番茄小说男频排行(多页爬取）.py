@@ -19,13 +19,15 @@ b=1
 for x in range(1,100):
     url=kk_URL+str(x)
     driver.get(url)
-    time.sleep(6)
+    time.sleep(3)
     y=driver.page_source
     mou_shi=r'H">(.*?)</'
     f=re.findall(mou_shi,y)
     for c in f:
         print(f'{b},{c}')
         b=b+1
+
+driver.quit()
 
 '''嗯，分页爬取是没有问题的，因为确实自动爬取到了不同分页的内容，所以值得高兴。
 但是爬取的信息并不完整，因为番茄中文网用了一种名为“字体加密”的反爬手段。'''
