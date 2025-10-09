@@ -63,3 +63,5 @@ del mean_1[1]
 print(len(mean_1))
 del mean_1[0]
 print(mean_1)
+
+print(f'我一共邀请了{len(mean_1)}个人，来这个晚宴。')

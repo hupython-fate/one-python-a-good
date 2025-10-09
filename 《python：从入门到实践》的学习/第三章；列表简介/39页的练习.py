@@ -1,0 +1,16 @@
+wu_ge_lv_you_di=['mei国西雅图','bei京长城','zhon关村','wu功山','tai山']
+print(f'原始列表的样子：',wu_ge_lv_you_di)
+f1=sorted(wu_ge_lv_you_di)
+print('按字母顺序排列的列表：',f1)
+print('再次打印列表，发现原始列表并没有改变：',wu_ge_lv_you_di)
+f2=sorted(wu_ge_lv_you_di,reverse=True)
+print('按反向的字母顺序排列的列表：',f2)
+print('第二次打印列表，发现列表依旧没有改变：',wu_ge_lv_you_di)
+wu_ge_lv_you_di.reverse()#方法
+print('发现列表的顺序倒了一下（reverse的功劳）：',wu_ge_lv_you_di)
+wu_ge_lv_you_di.reverse()
+print('发现列表倒回原始列表的样子了：',wu_ge_lv_you_di)
+wu_ge_lv_you_di.sort()
+print('使列表永远的以字母顺序排列：',wu_ge_lv_you_di)
+wu_ge_lv_you_di.sort(reverse=True)
+print('再反过来永久修改列表列表',wu_ge_lv_you_di)
