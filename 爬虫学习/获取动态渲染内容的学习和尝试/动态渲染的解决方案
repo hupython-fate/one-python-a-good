@@ -1,0 +1,89 @@
+1，方案一：Selenium - 浏览器自动化
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+import time
+
+def selenium_crawler():
+    """处理JavaScript渲染的页面"""
+
+    # 启动浏览器（需要安装ChromeDriver）
+    driver = webdriver.Chrome()  # 或 webdriver.Firefox()
+
+    try:
+        driver.get("https://example.com")
+
+        # 等待JavaScript执行完成
+        time.sleep(2)
+
+        # 现在可以获取渲染后的完整HTML
+        rendered_html = driver.page_source
+
+        # 用BeautifulSoup解析
+        soup = BeautifulSoup(rendered_html, 'html.parser')
+
+        # 或者直接用Selenium查找元素
+        elements = driver.find_elements(By.CSS_SELECTOR, ".dynamic-content")
+        for element in elements:
+            print(element.text)
+
+    finally:
+        driver.quit()
+
+# 优点：能处理所有动态内容
+# 缺点：速度慢，资源消耗大
+
+
+
+
+
+2，方案二：Requests-HTML - 轻量级渲染
+# 安装: pip install requests-html
+
+from requests_html import HTMLSession
+
+def requests_html_crawler():
+    """轻量级JavaScript渲染"""
+
+    session = HTMLSession()
+    resp = session.get("https://example.com")
+
+    # 执行JavaScript
+    resp.html.render(sleep=2)  # 等待2秒让JS执行
+
+    # 现在包含渲染后的内容
+    dynamic_elements = resp.html.find('.dynamic-content')
+
+    for element in dynamic_elements:
+        print(element.text)
+
+
+
+
+
+3，方案三：寻找隐藏的API
+
+
+import requests
+import json
+
+def api_crawler():
+    """很多"动态"网站其实有隐藏的API"""
+
+    # 1. 打开浏览器开发者工具 → 网络(Network)标签
+    # 2. 观察页面加载时的XHR/Fetch请求
+    # 3. 直接调用这些API
+
+    headers = {
+        'User-Agent': 'Mozilla/5.0',
+        'X-Requested-With': 'XMLHttpRequest'  # 模拟AJAX请求
+    }
+
+    # 示例：直接调用数据接口
+    api_url = "https://api.example.com/data"
+    response = requests.get(api_url, headers=headers)
+
+    if response.status_code == 200:
+        data = response.json()  # 直接获取结构化数据
+        return data
+
+    return None
