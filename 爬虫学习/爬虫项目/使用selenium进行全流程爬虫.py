@@ -20,11 +20,10 @@ html=driver.page_source
 
 #本来下一步就是用BeautifulSoup或者re进行解析和信息提取了，但是因为是用selenium进行全流程爬虫，所以用By类的方法或函数。
 move=[]
-u = driver.find_elements(By.TAG_NAME, "a")
+u = driver.find_elements(By.TAG_NAME,'a')
 for c in u:
     move.append(c.text)#要使用.text才能获得文本内容。
-f=set(move)#去重
-s=str(f)#转化为能存储得数据类型。
+s=str(move)#转化为能存储得数据类型。
 '''
 也可以使用get_attribute() 方法
 
