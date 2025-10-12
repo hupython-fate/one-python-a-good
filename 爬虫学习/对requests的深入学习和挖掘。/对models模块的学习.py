@@ -17,8 +17,8 @@ for n in public_members:
 
 #创建request实例
 #request=Request()
-#request.url('')#添加请求的url网址。
-#request.data()
+#request.url=''#添加请求的url网址。
+#request.data={}
 
 
 # 查看Request类的所有方法
