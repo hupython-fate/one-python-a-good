@@ -7,8 +7,6 @@ options：这是edge子包中的一个模块
 
 Options：这是options模块中的一个类，用于配置浏览器选项'''
 
-
-
 options = Options()
 options.add_argument('--headless')#option是上一行创建的对象，add_argument()是依附于这个对象的方法。
 '''Options()：创建Options类的实例（一个具体对象）
@@ -18,14 +16,10 @@ add_argument()：Options实例的方法，用于添加命令行参数
 --headless：参数值，让浏览器在后台运行（不显示界面）'''
 
 
-
-
 driver = webdriver.Edge(options=options)#这是在创建一个实例对象。
 '''webdriver.Edge：这是webdriver包中的一个类
 
 Edge()：创建Edge类的实例（一个具体的浏览器控制对象）'''
-
-
 
 
 

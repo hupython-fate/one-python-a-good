@@ -1,6 +1,5 @@
 from selenium import webdriver
 
-
 def setup_driver_alternative():
     """
     尝试使用其他浏览器作为备选
@@ -11,16 +10,12 @@ def setup_driver_alternative():
         return webdriver.Edge()
     except Exception:
         pass
-
     # 尝试 Firefox
     try:
         return webdriver.Firefox()
     except Exception:
         pass
-
     return None
-
-
 driver = setup_driver_alternative()
 if driver:
     driver.get("https://httpbin.org/html")

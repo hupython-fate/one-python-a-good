@@ -33,10 +33,8 @@ def nv_sheng(url):
     return ff
 #我明白您的问题了！您的代码只能返回最后一行是因为在循环中，每次迭代都会覆盖 vs 变量，最终只保留了最后一个值。
 #您需要创建一个列表来存储所有的结果：如上
-
 url = 'https://www.qdmm.com/rank/'
 fg=nv_sheng(url)
 print(fg)
-
 with open('./2025年10月起点女生高分书排行榜.txt','w',encoding='utf-8') as j:
     j.write(fg)

@@ -1,23 +1,11 @@
-# 安装 playwright 库
-#
-
-# 安装所需的浏览器（Chromium, Firefox, WebKit）
-#playwright install
-
-
-#pip install requests-html
-
 from playwright.sync_api import sync_playwright
 import time
-
-
 def simple_crawler(url):
     """最简单的Playwright爬虫"""
     with sync_playwright() as p:
         # 启动浏览器（显示界面以便观察）
         browser = p.chromium.launch(headless=False)
         page = browser.new_page()
-
         print(f"正在访问: {url}")
         page.goto(url)
 
@@ -36,8 +24,6 @@ def simple_crawler(url):
         browser.close()
 
         return html_content
-
-
 # 测试
 if __name__ == "__main__":
     test_url = "https://mobile.pinduoduo.com/search_result.html?search_key=wifi"  # 先用这个测试网站

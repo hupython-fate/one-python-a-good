@@ -46,8 +46,6 @@ value (对象): 选项值，类型取决于选项名称
     driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
 #execute_script() 翻译为："执行JavaScript脚本"
     return driver
-
-
 # 使用反检测配置
 driver = setup_stealth_driver()
 try:
@@ -60,6 +58,5 @@ try:
         print(driver.page_source[:1000])  # 打印前1000字符查看 #切片操作
     else:
         print("仍然被检测到，需要更高级的方案")
-
 finally:
     driver.quit()

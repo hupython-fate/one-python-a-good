@@ -8,7 +8,6 @@ print(x)
 #可以看到返回的内容，带\x的是未还原的中文。
 with open('爬来的html/返回一号的html文件.html', 'w', encoding='utf-8') as l:
     l.write(x)
-
 jie=BeautifulSoup(x,'html.parser')
 print(jie.p)
 
