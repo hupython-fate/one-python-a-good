@@ -4,7 +4,6 @@ from bs4 import BeautifulSoup
 import requests
 import time
 import os
-
 def pa_qu(url):
     options=Options()
     options.add_argument('--headless')
@@ -74,7 +73,6 @@ def pa_qu(url):
         print(f"下载完成！共成功下载 {p} 张图片")
         time.sleep(1)#防止对服务器造成太大的压力。
     return None
-
 if __name__ == '__main__':
     x='https://www.qidian.com/all/'
     pa_qu(x)

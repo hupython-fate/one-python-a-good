@@ -68,11 +68,12 @@ def selenium(ll='图片目录'):
                 src = 'https://image.baidu.com' + s  # 绝对路径
             elif not s.startswith(('http://', 'https://')):
                 continue  # 跳过无效URL
+        #startswith()是Python字符串方法，用于检查字符串是否以指定的前缀开头。它返回一个布尔值（True或False）。
             url_img.append(s)
     print(f"整理出 {len(url_img)} 个有效的图片URL")
 
     #下载图片
-    session=sessions.Session()
+    session=sessions.Session() #创建一个会话对象。
     p=0
     for l,url in enumerate(url_img):
         print(f"正在下载第 {l + 1} 张图片...")
