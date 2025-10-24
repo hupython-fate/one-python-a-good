@@ -2,7 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/.venv" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/PycharmProjects/PythonProject3" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/PycharmProjects/one-python-a-good" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/PythonProject2" vcs="Git" />
