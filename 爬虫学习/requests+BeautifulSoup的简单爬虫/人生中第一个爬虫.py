@@ -9,7 +9,4 @@ def ren_shen_di_yi_ci():
     if response.ok:
         print('ok')
         print(response.text)
-
 ren_shen_di_yi_ci()
-
-

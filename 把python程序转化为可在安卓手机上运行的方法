@@ -1,0 +1,201 @@
+我来演示使用 BeeWare 将 Python 代码转化为安卓应用的具体步骤：
+
+## 步骤 1: 安装 BeeWare
+
+```bash
+# 创建虚拟环境（推荐）
+python -m venv beeware-env
+source beeware-env/bin/activate  # Linux/Mac
+# 或 beeware-env\Scripts\activate  # Windows
+
+# 安装 BeeWare
+pip install briefcase
+```
+
+## 步骤 2: 创建新项目
+
+```bash
+# 创建新项目，会交互式询问项目信息
+briefcase new
+```
+
+交互过程示例：
+```
+正式名称 [Hello World]: My Python App
+应用程序名称 [mypythonapp]:
+包名 [com.example.mypythonapp]: com.yourname.myapp
+项目名称 [My Python App]:
+描述 [My Python Application]: A demo app for Android
+作者 [Jane Developer]: Your Name
+作者邮箱 [jane@example.com]: your@email.com
+URL [https://example.com/mypythonapp]:
+许可证 [BSD]:
+GUI 框架 [Toga]:
+```
+
+## 步骤 3: 查看项目结构
+
+创建的项目结构如下：
+```
+My Python App/
+├── src/
+│   └── mypythonapp/
+│       ├── __init__.py
+│       ├── __main__.py
+│       └── app.py
+├── tests/
+├── pyproject.toml
+└── README.rst
+```
+
+## 步骤 4: 修改应用代码
+
+编辑 `src/mypythonapp/app.py`：
+
+```python
+import toga
+from toga.style import Pack
+from toga.style.pack import COLUMN, ROW
+
+
+class MyPythonApp(toga.App):
+    def startup(self):
+        # 创建主窗口
+        self.main_window = toga.MainWindow(title=self.formal_name)
+
+        # 创建主要部件
+        main_box = toga.Box(style=Pack(direction=COLUMN, padding=10))
+
+        # 创建标签
+        self.label = toga.Label(
+            "欢迎使用 Python Android 应用!",
+            style=Pack(padding=5)
+        )
+
+        # 创建按钮
+        button = toga.Button(
+            "点击我!",
+            on_press=self.handle_click,
+            style=Pack(padding=5)
+        )
+
+        # 创建输入框
+        self.text_input = toga.TextInput(
+            placeholder="输入一些文字...",
+            style=Pack(padding=5, flex=1)
+        )
+
+        # 创建水平布局容器
+        input_box = toga.Box(style=Pack(direction=ROW, padding=5))
+        input_box.add(self.text_input)
+
+        # 添加所有部件到主容器
+        main_box.add(self.label)
+        main_box.add(button)
+        main_box.add(input_box)
+
+        # 设置窗口内容
+        self.main_window.content = main_box
+
+        # 显示窗口
+        self.main_window.show()
+
+    def handle_click(self, widget):
+        # 按钮点击事件处理
+        input_text = self.text_input.value
+        if input_text:
+            self.label.text = f"你输入了: {input_text}"
+        else:
+            self.label.text = "请先在输入框中输入文字!"
+
+
+def main():
+    return MyPythonApp()
+```
+
+## 步骤 5: 在桌面测试应用
+
+```bash
+# 进入项目目录
+cd "My Python App"
+
+# 创建桌面版本（用于测试）
+briefcase create desktop
+
+# 构建桌面应用
+briefcase build desktop
+
+# 运行桌面应用
+briefcase run desktop
+```
+
+## 步骤 6: 创建 Android 版本
+
+```bash
+# 创建 Android 项目
+briefcase create android
+
+# 构建 Android APK
+briefcase build android
+
+# 打包为 APK 文件
+briefcase package android
+```
+
+## 步骤 7: 安装和测试
+
+```bash
+# 在连接的 Android 设备上安装（需要启用 USB 调试）
+briefcase run android
+
+# 或者手动安装生成的 APK
+# APK 文件位于 android/bin/ 目录
+```
+
+## 配置说明
+
+编辑 `pyproject.toml` 文件可以自定义应用配置：
+
+```toml
+[tool.briefcase]
+project_name = "My Python App"
+bundle = "com.yourname"
+version = "0.0.1"
+url = "https://example.com/mypythonapp"
+author = "Your Name"
+author_email = "your@email.com"
+
+[tool.briefcase.app.mypythonapp]
+formal_name = "My Python App"
+description = "A demo app for Android"
+sources = ["src/mypythonapp"]
+requires = [
+    "toga>=0.3.0",
+]
+
+[tool.briefcase.app.mypythonapp.android]
+permissions = [
+    "INTERNET",
+    "WRITE_EXTERNAL_STORAGE",
+]
+```
+
+## 注意事项
+
+1. **Android SDK 要求**：需要安装 Android SDK 并设置 `ANDROID_HOME` 环境变量
+2. **Java 要求**：需要 Java 8 或更高版本
+3. **首次构建**：第一次构建会下载 Android SDK 组件，可能需要较长时间
+4. **权限**：在 `pyproject.toml` 中声明应用需要的权限
+5. **图标**：可以替换 `resources` 目录下的图标文件
+
+## 常见问题解决
+
+如果遇到构建问题：
+
+```bash
+# 清理并重新构建
+briefcase update android
+briefcase build android
+```
+
+这个演示展示了完整的 BeeWare 开发流程，从项目创建到最终 APK 生成。BeeWare 的优势在于它提供了原生的 Android 用户体验，而不是 WebView 包装。

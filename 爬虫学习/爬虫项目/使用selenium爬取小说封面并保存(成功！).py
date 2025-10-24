@@ -42,7 +42,7 @@ def pa_qu(url):
     driver.quit()
 
     #第二步，下载图片：
-    lll='爬到的小说封面图集'
+    lll='爬到的图集'
     if not os.path.exists(lll):
         os.makedirs(lll)
     sess=requests.sessions.Session()
@@ -74,5 +74,5 @@ def pa_qu(url):
         time.sleep(1)#防止对服务器造成太大的压力。
     return None
 if __name__ == '__main__':
-    x='https://www.qidian.com/all/'
+    x=input('请输入你想要下载的图片的url(即网址，比如https://image.baidu.com）：')
     pa_qu(x)
