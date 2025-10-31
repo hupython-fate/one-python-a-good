@@ -1,5 +1,5 @@
 with open('../txt文件/poem.txt', 'w', encoding='utf-8') as l:
-    l.write('我欲乘风归去,\n又恐琼楼玉宇,\n高处不胜寒。\n')
+    l.write('我欲乘风归,\n高处不胜寒。\n')
 
 
 with open('../txt文件/poem.txt', 'a', encoding='utf-8') as k:
