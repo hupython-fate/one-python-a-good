@@ -1,0 +1,67 @@
+2025-11-02 23:48:35,524 - ERROR - 权限拒绝: D:\PyCharm 2025.2.1\bin - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\PyCharm 2025.2.1\\bin'
+2025-11-02 23:54:22,084 - ERROR - 权限拒绝: D:\PyCharm 2025.2.1\bin - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\PyCharm 2025.2.1\\bin'
+2025-11-03 00:01:07,942 - ERROR - 权限拒绝: D:\PyCharm 2025.2.1\bin - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\PyCharm 2025.2.1\\bin'
+2025-11-03 00:06:23,635 - INFO - 开始扫描目录: C:\
+2025-11-03 00:06:23,875 - INFO - 已找到 50 个空目录...
+2025-11-03 00:19:10,433 - INFO - 找到 57 个空目录
+2025-11-03 00:19:10,433 - INFO - 开始处理 57 个空目录...
+2025-11-03 00:19:10,436 - INFO - [已删除] 空目录: C:\msys64\usr\share\perl5\core_perl\CPAN\Meta\History
+2025-11-03 00:19:10,436 - INFO - [已删除] 空目录: C:\msys64\usr\share\perl5\core_perl\CPAN\API
+2025-11-03 00:19:10,436 - INFO - [已删除] 空目录: C:\msys64\etc\pki\ca-trust\source\blacklist
+2025-11-03 00:19:10,437 - INFO - [已删除] 空目录: C:\msys64\etc\pki\ca-trust\source\anchors
+2025-11-03 00:19:10,438 - INFO - [已删除] 空目录: C:\msys64\usr\share\pki\ca-trust-legacy
+2025-11-03 00:19:10,438 - INFO - [已删除] 空目录: C:\msys64\usr\share\perl5\site_perl
+2025-11-03 00:19:10,438 - INFO - [已删除] 空目录: C:\msys64\var\cache\pacman\pkg
+2025-11-03 00:19:10,439 - INFO - [已删除] 空目录: C:\msys64\usr\bin\vendor_perl
+2025-11-03 00:19:10,439 - INFO - [已删除] 空目录: C:\msys64\usr\lib\perl5\site_perl
+2025-11-03 00:19:10,440 - INFO - [已删除] 空目录: C:\msys64\usr\share\man\man2
+2025-11-03 00:19:10,440 - INFO - [已删除] 空目录: C:\msys64\usr\share\man\man4
+2025-11-03 00:19:10,440 - INFO - [已删除] 空目录: C:\msys64\usr\bin\site_perl
+2025-11-03 00:19:10,440 - INFO - [已删除] 空目录: C:\msys64\clangarm64\share
+2025-11-03 00:19:10,441 - WARNING - 无法修改目录权限: C:\Intel\GfxCPLBatchFiles - [WinError 5] 拒绝访问。: 'C:\\Intel\\GfxCPLBatchFiles'
+2025-11-03 00:19:10,441 - INFO - [已删除] 空目录: C:\msys64\usr\share\man\man6
+2025-11-03 00:19:10,441 - INFO - [已删除] 空目录: C:\msys64\clangarm64\include
+2025-11-03 00:19:10,441 - INFO - [已删除] 空目录: C:\msys64\clang64\include
+2025-11-03 00:19:10,441 - ERROR - 权限拒绝: C:\Intel\GfxCPLBatchFiles - [WinError 5] 拒绝访问。: 'C:\\Intel\\GfxCPLBatchFiles'
+2025-11-03 00:19:10,442 - INFO - [已删除] 空目录: C:\msys64\mingw32\include
+2025-11-03 00:19:10,442 - INFO - [已删除] 空目录: C:\msys64\mingw64\include
+2025-11-03 00:19:10,443 - INFO - [已删除] 空目录: C:\msys64\clangarm64\bin
+2025-11-03 00:19:10,443 - INFO - [已删除] 空目录: C:\msys64\clangarm64\etc
+2025-11-03 00:19:10,444 - INFO - [已删除] 空目录: C:\msys64\clangarm64\lib
+2025-11-03 00:19:10,444 - INFO - [已删除] 空目录: C:\msys64\ucrt64\include
+2025-11-03 00:19:10,444 - INFO - [已删除] 空目录: C:\msys64\clang64\share
+2025-11-03 00:19:10,444 - INFO - [已删除] 空目录: C:\msys64\usr\ssl\private
+2025-11-03 00:19:10,444 - INFO - [已删除] 空目录: C:\msys64\mingw32\share
+2025-11-03 00:19:10,445 - INFO - [已删除] 空目录: C:\msys64\mingw64\share
+2025-11-03 00:19:10,445 - INFO - [已删除] 空目录: C:\msys64\ucrt64\share
+2025-11-03 00:19:10,445 - INFO - [已删除] 空目录: C:\msys64\var\cache\man
+2025-11-03 00:19:10,446 - INFO - [已删除] 空目录: C:\msys64\clang64\bin
+2025-11-03 00:19:10,446 - INFO - [已删除] 空目录: C:\msys64\clang64\etc
+2025-11-03 00:19:10,446 - INFO - [已删除] 空目录: C:\msys64\var\lib\misc
+2025-11-03 00:19:10,447 - INFO - [已删除] 空目录: C:\msys64\clang64\lib
+2025-11-03 00:19:10,447 - INFO - [已删除] 空目录: C:\msys64\etc\fstab.d
+2025-11-03 00:19:10,447 - INFO - [已删除] 空目录: C:\msys64\mingw32\bin
+2025-11-03 00:19:10,447 - INFO - [已删除] 空目录: C:\msys64\mingw32\etc
+2025-11-03 00:19:10,448 - INFO - [已删除] 空目录: C:\msys64\mingw32\lib
+2025-11-03 00:19:10,448 - INFO - [已删除] 空目录: C:\msys64\mingw64\bin
+2025-11-03 00:19:10,448 - INFO - [已删除] 空目录: C:\msys64\mingw64\etc
+2025-11-03 00:19:10,449 - INFO - [已删除] 空目录: C:\msys64\mingw64\lib
+2025-11-03 00:19:10,449 - INFO - [已删除] 空目录: C:\msys64\var\log\old
+2025-11-03 00:19:10,450 - INFO - [已删除] 空目录: C:\msys64\dev\mqueue
+2025-11-03 00:19:10,450 - INFO - [已删除] 空目录: C:\msys64\ucrt64\bin
+2025-11-03 00:19:10,450 - INFO - [已删除] 空目录: C:\msys64\ucrt64\etc
+2025-11-03 00:19:10,450 - INFO - [已删除] 空目录: C:\msys64\ucrt64\lib
+2025-11-03 00:19:10,450 - INFO - [已删除] 空目录: C:\msys64\var\empty
+2025-11-03 00:19:10,450 - INFO - [已删除] 空目录: C:\msys64\var\local
+2025-11-03 00:19:10,451 - INFO - [已删除] 空目录: C:\msys64\usr\src
+2025-11-03 00:19:10,451 - INFO - [已删除] 空目录: C:\msys64\dev\shm
+2025-11-03 00:19:10,451 - INFO - [已删除] 空目录: C:\msys64\usr\var
+2025-11-03 00:19:10,451 - INFO - [已删除] 空目录: C:\msys64\var\opt
+2025-11-03 00:19:10,452 - INFO - [已删除] 空目录: C:\msys64\var\tmp
+2025-11-03 00:19:10,452 - INFO - [已删除] 空目录: C:\msys64\opt
+2025-11-03 00:19:10,452 - INFO - [已删除] 空目录: C:\msys64\tmp
+2025-11-03 00:19:10,453 - INFO - [已删除] 空目录: C:\temp
+2025-11-03 00:19:10,453 - INFO - [已删除] 空目录: C:\ESD
+2025-11-03 00:19:10,453 - INFO - [已删除] 空目录: C:\KRECYCLE
+2025-11-03 00:21:41,298 - ERROR - 权限拒绝: D:\PyCharm 2025.2.1\bin - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\PyCharm 2025.2.1\\bin'
+2025-11-03 00:27:39,047 - ERROR - 权限拒绝: D:\PyCharm 2025.2.1\bin - [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'D:\\PyCharm 2025.2.1\\bin'
