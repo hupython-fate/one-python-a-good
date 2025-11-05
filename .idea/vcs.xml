@@ -6,4 +6,7 @@
     <mapping directory="$PROJECT_DIR$/PycharmProjects/one-python-a-good" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/PythonProject2" vcs="Git" />
   </component>
+  <component name="VcsProjectSettings">
+    <option name="detectVcsMappingsAutomatically" value="false" />
+  </component>
 </project>
