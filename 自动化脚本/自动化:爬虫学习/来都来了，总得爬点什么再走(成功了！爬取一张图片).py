@@ -20,7 +20,7 @@ def pa_yi():
     response=session.send(resp)
 
     if response.status_code==200:
-        with open('./一张图片.jpg','wb') as f:
+        with open('一张图片.jpg', 'wb') as f:
             f.write(response.content)
     else:
         print(response.status_code)

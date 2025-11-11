@@ -36,5 +36,5 @@ def nv_sheng(url):
 url = 'https://www.qdmm.com/rank/'
 fg=nv_sheng(url)
 print(fg)
-with open('./2025年10月起点女生高分书排行榜.txt','w',encoding='utf-8') as j:
+with open('2025年10月起点女生高分书排行榜.txt', 'w', encoding='utf-8') as j:
     j.write(fg)

@@ -38,7 +38,7 @@ def pa_ye_shu(k):#k为要爬取的页数。
         i+=1
     l=set(title_list)
     tle=str(l)#变成字符串形式的列表。
-    with open("./爬取诡秘之主同人文书名.txt",'w',encoding='utf-8') as f:
+    with open("爬取诡秘之主同人文书名.txt", 'w', encoding='utf-8') as f:
         f.write(tle)
 def pa():
     kk=int(input("请输入你要爬取的页数："))

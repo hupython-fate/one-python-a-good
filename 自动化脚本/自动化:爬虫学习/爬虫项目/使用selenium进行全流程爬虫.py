@@ -22,7 +22,7 @@ def kai_tian_pi_di():
     for c in u:
         move.append(c.text)#要使用.text才能获得文本内容。
     s=str(move)#转化为能存储得数据类型。
-    with open('./2024年优秀电影名单.txt','w',encoding='utf-8')as gg:
+    with open('2024年优秀电影名单.txt', 'w', encoding='utf-8')as gg:
         gg.write(s)
 kai_tian_pi_di()
 '''
