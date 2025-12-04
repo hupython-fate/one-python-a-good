@@ -31,7 +31,7 @@ def nan_ping():
             print(f'书名：{y}, {book_title}')
             y += 1
     fff=str(seen_titles)
-    with open('2025年11月起点男频高排名书籍.txt', 'w', encoding='utf-8') as f:
+    with open('2025年12月起点男频高排名书籍.txt', 'w', encoding='utf-8') as f:
         f.write(fff)
 nan_ping()
 '''以后可以每个月运行一下这个程序，只需点一下，就可以自动获取当月的起点男频排行榜，可以说是一劳永逸了。'''
