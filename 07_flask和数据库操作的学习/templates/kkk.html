@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>这是为了使用模板文件的变量渲染的实验文件</title>
+</head>
+<body>
+<h1>这是一个字符串：{{ hhh }}</h1>
+<!-- 在上面的代码中，我们使用了{ { 变量名 } } 的语法，来读取一个从视图函数中传递过来的变量hhh -->
+<div>
+    ppp的第一个name值是{{ ppp['name'] }},<br> <!-- 两种形式都可以 -->1
+    ppp的第二个age值是{{ ppp.age }}.
+</div>
+<div>
+    s的第1个属性是{{ s.name }},s的第二个属性是{{ s.dianhua }}
+</div>
+</body>
+</html>
+
