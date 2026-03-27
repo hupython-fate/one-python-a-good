@@ -3,8 +3,8 @@ import requests
 def pa_dou_ban():
     head={'User-Agent':'Mozilla/5.0(Windows NT 10.0; Win64; x64)'}
     fan_hui_ti=requests.get('https://movie.douban.com/chart',headers=head)
-    print(fan_hui_ti)
-    print(fan_hui_ti.text)
+    #print(fan_hui_ti)
+    #print(fan_hui_ti.text)
     with open('../爬来的html/储存获取的html的源代码.html', 'w', encoding='utf-8') as k:
         k.write(fan_hui_ti.text)
     u=BeautifulSoup(fan_hui_ti.text,"html.parser")#解析和整理函数。
