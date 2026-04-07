@@ -4,6 +4,7 @@
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/.venv" />
+      <excludeFolder url="file://$MODULE_DIR$/07_flask和数据库操作的学习/.venv" />
     </content>
     <orderEntry type="jdk" jdkName="Python 3.14 (one-python-a-good)" jdkType="Python SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
